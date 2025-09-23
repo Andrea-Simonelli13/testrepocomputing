@@ -17,3 +17,4 @@ this is a test repository for the computing methods course
    :caption: Contents:
 
    Documentation
+   api
