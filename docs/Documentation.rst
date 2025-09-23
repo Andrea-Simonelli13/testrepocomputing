@@ -1,6 +1,5 @@
 .. _documentation:
 
-Documentazione
-==============
-
-Prova di una documentazione per questo repositorio eseguita con sphinx.
+Documentation
+=============
+ this is the documentation for this test repository for the computing methods course.
