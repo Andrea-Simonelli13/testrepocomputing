@@ -3,10 +3,10 @@ import subprocess
 
 from ._version import __version__ as __base_version__
 
-METAREP_SRC = pathlib.Path(__file__).parent
-METAREP_ROOT = METAREP_SRC.parent.parent
-METAREP_TESTS = METAREP_ROOT / "tests"
-METAREP_DOCS = METAREP_ROOT / "docs"
+TESTREPOCOMPUTING_SRC = pathlib.Path(__file__).parent
+TESTREPOCOMPUTING_ROOT = TESTREPOCOMPUTING_SRC.parent.parent
+TESTREPOCOMPUTING_TESTS = TESTREPOCOMPUTING_ROOT / "tests"
+TESTREPOCOMPUTING_DOCS = TESTREPOCOMPUTING_ROOT / "docs"
 
 
 def _git_suffix() -> str:
@@ -16,7 +16,7 @@ def _git_suffix() -> str:
     This will return something along the lines of ``+gf0f18e6.dirty``.
     """
     # pylint: disable=broad-except
-    kwargs = dict(cwd=METAREP_ROOT, stderr=subprocess.DEVNULL)
+    kwargs = dict(cwd=TESTREPOCOMPUTING_ROOT, stderr=subprocess.DEVNULL)
     try:
         # Retrieve the git short sha to be appended to the base version string.
         args = ["git", "rev-parse", "--short", "HEAD"]

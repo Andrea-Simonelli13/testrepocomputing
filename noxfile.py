@@ -17,7 +17,7 @@ import shutil
 
 import nox
 
-from metarep import METAREP_DOCS, METAREP_ROOT, METAREP_SRC, METAREP_TESTS
+from testrepocomputing import TESTREPOCOMPUTING_DOCS, TESTREPOCOMPUTING_ROOT, TESTREPOCOMPUTING_SRC, TESTREPOCOMPUTING_TESTS
 
 # Folders containing source code that potentially needs linting.
 SOURCE_DIRS = ("src", "tests", "tools")
@@ -30,12 +30,12 @@ def cleanup(session: nox.Session) -> None:
     """Cleanup temporary files.
     """
     # Remove all the __pycache__ folders.
-    for folder_path in (METAREP_ROOT, METAREP_SRC, METAREP_TESTS):
+    for folder_path in (TESTREPOCOMPUTING_ROOT, TESTREPOCOMPUTING_SRC, TESTREPOCOMPUTING_TESTS):
         _path = folder_path / "__pycache__"
         if _path.exists():
             shutil.rmtree(_path)
     # Cleanup the docs.
-    _path = METAREP_DOCS / "_build"
+    _path = TESTREPOCOMPUTING_DOCS / "_build"
     if _path.exists():
             shutil.rmtree(_path)
 
@@ -50,8 +50,8 @@ def docs(session: nox.Session) -> None:
     be created remotely anyway. (This also illustrates the use of the nox.session
     decorator called with arguments.)
     """
-    source_dir = METAREP_DOCS
-    output_dir = METAREP_DOCS / "_build" / "html"
+    source_dir = TESTREPOCOMPUTING_DOCS
+    output_dir = TESTREPOCOMPUTING_DOCS / "_build" / "html"
     session.run("sphinx-build", "-b", "html", source_dir, output_dir, *session.posargs)
 
 
