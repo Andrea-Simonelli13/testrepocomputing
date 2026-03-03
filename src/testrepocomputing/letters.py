@@ -1,11 +1,13 @@
 #import sys
 import argparse
-import time
 import string
+import time
+
 import matplotlib.pyplot as plt
 
+
 def letters(file_path__, start_marker=None, end_marker=None):
-    with open(file_path__, "r", encoding="utf-8") as file:
+    with open(file_path__, encoding="utf-8") as file:
         contenuto = file.read().lower()
         contenuto = estrai_contenuto_custom(
             contenuto,
@@ -53,7 +55,7 @@ def print_histogram(freq_dict):
             print(f"{lettera}: {'*' * stars} ({count})")
 
 def text_stats(file_path__):
-    with open(file_path__, "r", encoding="utf-8") as file:
+    with open(file_path__, encoding="utf-8") as file:
         testo = file.read()
         testo_senza_spazi = testo.translate(str.maketrans('', '', string.whitespace))
         num_characters = len(testo_senza_spazi)

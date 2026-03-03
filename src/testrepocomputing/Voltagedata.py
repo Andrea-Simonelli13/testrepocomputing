@@ -1,7 +1,8 @@
 ########################################################################################################
 import numpy
-from scipy import interpolate
 from matplotlib import pyplot as plt
+from scipy import interpolate
+
 
 class VoltageData:
    def __init__(self, timestamps, voltages):

@@ -17,7 +17,12 @@ import shutil
 
 import nox
 
-from testrepocomputing import TESTREPOCOMPUTING_DOCS, TESTREPOCOMPUTING_ROOT, TESTREPOCOMPUTING_SRC, TESTREPOCOMPUTING_TESTS
+from testrepocomputing import (
+    TESTREPOCOMPUTING_DOCS,
+    TESTREPOCOMPUTING_ROOT,
+    TESTREPOCOMPUTING_SRC,
+    TESTREPOCOMPUTING_TESTS,
+)
 
 # Folders containing source code that potentially needs linting.
 SOURCE_DIRS = ("src", "tests", "tools")

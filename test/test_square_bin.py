@@ -1,7 +1,7 @@
-import numpy as np
 import pytest
 
 from testrepocomputing.square_bin import square_bin
+
 
 def test_numbers():
     """Test the square_bin function with numbers.

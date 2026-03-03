@@ -1,5 +1,6 @@
 import math
 
+
 class Particle:
     ''' Class defining particles'''
     def __init__(self, mass, charge, name, momentum=0.):
@@ -68,7 +69,11 @@ class Proton(Particle):
     NAME = 'Proton'
 
     def __init__(self, momentum=0.):
-        Particle.__init__(self, mass = Proton.MASS, charge= Proton.CHARGE, name= Proton.NAME, momentum=momentum)
+        Particle.__init__(self, 
+                          mass = Proton.MASS, 
+                          charge= Proton.CHARGE, 
+                          name= Proton.NAME, 
+                          momentum=momentum)
 
 if __name__ == '__main__':
     proton = Proton(200.)

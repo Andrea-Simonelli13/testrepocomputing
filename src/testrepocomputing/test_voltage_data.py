@@ -1,6 +1,8 @@
 import numpy
 from matplotlib import pyplot as plt
+
 from testrepocomputing.Voltagedata import VoltageData
+
 
 def run_tests():
     """ Here we test the functionalities of our class. These are not proper

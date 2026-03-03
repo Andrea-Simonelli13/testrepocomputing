@@ -1,7 +1,8 @@
+
 import numpy as np
-from scipy.interpolate import InterpolatedUnivariateSpline
 from matplotlib import pyplot as plt
-import math
+from scipy.interpolate import InterpolatedUnivariateSpline
+
 
 class ProbabilityDensityFunction(InterpolatedUnivariateSpline):
     def __init__(self, x, y, k=1):
@@ -15,7 +16,9 @@ class ProbabilityDensityFunction(InterpolatedUnivariateSpline):
         self.ppf = InterpolatedUnivariateSpline(_y, x, k=1)
 
     def rvs(self, size=1):
-        return self.ppf(np.random.uniform(0., 1., size))    
+        rng = np.random.default_rng()  # crea un generatore
+        return self.ppf(rng.uniform(0., 1., size))
+        #return self.ppf(np.random.uniform(0., 1., size))    
 
     # def __call__(self, x):
     #     return self._spline(x)    

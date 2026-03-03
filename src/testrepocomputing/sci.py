@@ -1,12 +1,14 @@
-from matplotlib import pyplot as plt
 import math
-import random
+
 import numpy as np
-import time
+from matplotlib import pyplot as plt
 
 n = 1000
 
-phi = np.random.uniform(0., 2* math.pi, size = n)
+rng = np.random.default_rng()  # crea un generatore moderno
+
+phi = rng.uniform(0., 2 * math.pi, size=n)
+#phi = np.random.uniform(0., 2* math.pi, size = n)
 x = np.sin(phi).cumsum()
 y = np.cos(phi).cumsum()
 
