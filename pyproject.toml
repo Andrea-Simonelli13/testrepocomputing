@@ -42,7 +42,8 @@ dev = [
     "pytest",
     "ruff",
     "pylint",
-    "matplotlib" #aggiungere le dipendenze solo per i test
+    "matplotlib", #aggiungere le dipendenze solo per i test
+    "scipy"
   ]
 docs = [
     "sphinx",
